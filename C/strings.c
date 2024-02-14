@@ -28,7 +28,7 @@ int main()
 
 //Functions on strings
 #include<stdio.h>
-#include<string.h>//Requires this library.
+#include<string.h>//Requires library.
 int main()
 {
     char a [10], c [10];
