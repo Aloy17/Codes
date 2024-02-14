@@ -26,7 +26,7 @@ int main()
     puts(a);//Displays the value in array
 }
 
-//Various functions on strings
+//Functions on strings
 #include<stdio.h>
 #include<string.h>//Requires this library.
 int main()
