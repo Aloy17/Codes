@@ -1,29 +1,25 @@
 import time
 import random
-print("Hello, this is a small program that'll try to guess your number")
-time.sleep(2)
-print("Please enter a range (Between which 2 numebrs will your original number be)")
-m = int(input("Range1:"))
-n = int(input("Range2:"))
+print("Hello, this is a simple guessing game, I'm going to guess a number between 1-10")
+time.sleep(1)
+print("You have to guess the number")
 
-nom = int(input("Great now enter your number (don't worry I won't peak :-)"))
-
+high = 10
+low = 1
+mid = 5 
+ansr = random.randint(1,10)
 while True:
-    print("I'll now try to guess your number")
-    time.sleep(1)
-    print(".")
-    time.sleep(1)
-    print(".")
-    time.sleep(1)
-    print(".")
-    num = random.randint(m,n)
-    print(f"Is THIS you number? {num} (yes or no)")
-    ansr = input()
-    if ansr.lower()=="yes":
-        print("Fantastic")
+    n = int(input("Ok now guess the number:"))
+    if n == ansr:
+        print("CONGRATULATIONS YOU GUESSED IT RIGHT!")
         break
+    elif n < mid:
+        print("You're close")
+        high = mid-1
+    elif n > mid:
+        print("Too far")
+        low = mid+1
     
-    else:
-        print("Awwwww i'll try again!")
+
         
         
