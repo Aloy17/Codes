@@ -32,7 +32,7 @@ def game():
         used_letters.add(n)
         
         
-        if n.lower() in ansr_letters:
+        if n.upper() in ansr_letters:
             print("Good guess")
             correct_letters.add(n)
             
