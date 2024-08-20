@@ -4,9 +4,17 @@ import random
 
 print("This is the hangman game, your partner has made 4 words, you'll have to guess one of them")
 time.sleep(3)
-print("Hint: Fruits")
+print(f"Hint: {words.hint}")
 time.sleep(1)
 print("You'll have 6 attempts (lives) to guess before you lose")
+print("Ready?")
+time.sleep(1)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+time.sleep(1)
 
 def game():
     ansr = random.choice(words.fruits)
@@ -16,15 +24,16 @@ def game():
     ansr_letters = list(ansr)
     
     while lives > 0:
-        output = ''.join([letter if letter in correct_letters else "_" for letter in ansr_letters])
+        output = ''.join([letter if letter in correct_letters else " _ " for letter in ansr_letters])
         print(f"Your word is {output}")
         
         if output==ansr:
             print("CONGRATULATIONS!!! you've guessed the word!")
             break
         
-        n = input("Guess a letter:")
-        
+        m = input("Guess a letter:")
+        n = m.upper()
+                
         if n in used_letters:
             print("You've already guessed this letter")
             continue
@@ -32,7 +41,7 @@ def game():
         used_letters.add(n)
         
         
-        if n.upper() in ansr_letters:
+        if n in ansr_letters:
             print("Good guess")
             correct_letters.add(n)
             
